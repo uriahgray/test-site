@@ -1,5 +1,7 @@
 var gulp = require('gulp');
 var watch = require('gulp-watch');
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
 
 gulp.task('default', function(){
   console.log("you ran the gulp task");
@@ -10,7 +12,9 @@ gulp.task('html', function(){
 });
 
 gulp.task('styles', function(){
-  console.log('updates styles');
+  return gulp.src('./app/assets/styles/styles.css')
+    .pipe()
+    .pipe(gulp.dest('./app/temp/'));
 });
 
 gulp.task('watch', function(){
