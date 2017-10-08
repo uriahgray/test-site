@@ -1,0 +1,9 @@
+.section-title {
+    font-size: 3.75rem;
+    font-weight: normal;
+    text-align: center;
+
+    &__star {
+      margin-right: 0.5rem;
+    }
+}
